@@ -23,7 +23,7 @@ const NavButton = ({ text, onClickHandler }) => {
 
 const NavLink = ({ text, onclickHandler }) => {
     return (
-        <button className="button" onClick={onclickHandler}>{text}</button>
+        <button className="button is-primary is-rounded" onClick={onclickHandler}>{text}</button>
     );
 };
 
@@ -32,7 +32,7 @@ export const Navbar = ({ toggleYoAnderson, toggleListTasks }) => {
 
     return (
 
-        <nav className="navbar is-light">
+        <nav className="navbar is-primary">
             <div className="navbar-brand">
                 <NavLogo />
             </div>

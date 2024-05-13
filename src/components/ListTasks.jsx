@@ -41,8 +41,8 @@ export const ListTasks = () => {
                                                 <p>Materia: {task.taskType}</p>
                                                 {task.comments && task.comments.map((comment, index) => (
                                                     <div key={index} className=''>
-                                                        <p>Comentario {index + 1}: {comment.content}</p>
                                                         <p>Autor: {comment.author}</p>
+                                                        <p>{comment.content}</p>
                                                     </div>
                                                 ))}
                                                 <br />
