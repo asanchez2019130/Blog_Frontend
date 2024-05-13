@@ -35,18 +35,19 @@ export const ListTasks = () => {
                                                     <img src={task.img || 'https://bulma.io/assets/images/placeholders/1280x960.png'} alt={task.title} />
                                                 </figure>
                                             </div>
-                                            <div className="media-content">
+                                            <div className="card-content">
                                                 <p className="title is-4">{task.title}</p>
                                                 <p className="subtitle is-6">{task.description}</p>
                                                 <p>Materia: {task.taskType}</p>
                                                 {task.comments && task.comments.map((comment, index) => (
-                                                    <div key={index}>
+                                                    <div key={index} className=''>
                                                         <p>Comentario {index + 1}: {comment.content}</p>
                                                         <p>Autor: {comment.author}</p>
                                                     </div>
                                                 ))}
-                                                <div className="control">
-                                                    <button className="button is-info" onClick={() => setFullscreenTaskId(task._id)}>Agregar Comentario</button>
+                                                <br />
+                                                <div className="buttons has-addons is-centered">
+                                                    <button className="button is-success is-outlined" onClick={() => setFullscreenTaskId(task._id)}>Agregar Comentario</button>
                                                 </div>
                                                 {fullscreenTaskId === task._id && <AddComment taskId={task._id} />}
                                             </div>
